@@ -314,7 +314,7 @@ section {
 
 
 .modal-content  button {
-  width: 550px;
+  width: 100%;
   border: none;
   margin-top: 5px;
   padding: 10px;
