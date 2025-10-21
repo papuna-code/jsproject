@@ -1,0 +1,222 @@
+/* 🔹 Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+
+.navBar {
+  background-color: brown;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navBar h3 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.navBar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navBar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navBar ul li a:hover {
+  color: #00aaff;
+  transform: scale(1.1);
+}
+
+.navBar ul li a i {
+  font-size: 18px;
+}
+
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px 20px;
+}
+
+section img {
+  width: 320px;
+  display: block;
+  margin: 60px auto;
+  opacity: 0.8;
+}
+
+.card {
+  width: 18rem;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card-text button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-text button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.card-text button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: #a71d2a;
+}
+
+
+.burger {
+  display: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.burger i {
+  font-size: 26px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.burger.active i {
+  transform: rotate(90deg);
+}
+
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .navBar {
+    padding: 15px 25px;
+  }
+
+  .navBar ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 25px;
+    padding-top: 100px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navBar ul.show {
+    right: 0;
+  }
+
+  .navBar ul li a {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .navBar ul li a:hover {
+    color: red;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.6rem;
+    color: black;
+    cursor: pointer;
+    transition:  0.3;
+  }
+
+  .close-btn:hover {
+    color: red;
+  }
+}
+
+

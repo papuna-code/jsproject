@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  />
+
+</head>
+
+<body>
+  <nav>
+    <div class="bar">
+      <img src="image/step logog.png" alt="" />
+      <div class="meny">
+        <a href="index.html">Home</a>
+        <a href="card.html">Cart</a>
+        <a href="#" id="registerBtn">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="image">
+    <h1>Fast and efficient, online ordering you must try.</h1>
+  </div>
+
+  <h1 style="text-align: center; margin: 40px"><b>Categories</b></h1>
+
+  <ul class="AllSalads">
+    <li onclick="getAll()"><button>All</button></li>
+  </ul>
+  <span class="line"></span>
+
+  <div class="mainSection">
+    <div class="miniFilter">
+      <form class="filterCard">
+        <div class="upper">
+          <p>Filter</p>
+          <i class="fa-solid fa-filter"></i>
+        </div>
+        <div class="range">
+          <label for="spiceSlider">Spiciness: <span id="spiceValue">0</span></label>
+          <input type="range" value="0" min="0" max="4" step="1" id="spiceSlider" />
+        </div>
+        <label for="noNutsCheck" class="checkbox">
+          <input type="checkbox" id="noNutsCheck" /> No Nuts
+        </label>
+        <label for="vegCheck" class="checkbox">
+          <input type="checkbox" id="vegCheck" value="true" /> Vegetarian Only
+        </label>
+        <div class="btnsFilter">
+          <button id="resetBtn" class="filterButtons">Reset</button>
+          <button id="applyBtn" class="filterButtons">Apply</button>
+        </div>
+      </form>
+    </div>
+
+    <section></section>
+  </div>
+
+  <div class="modal" id="registerModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Register</h2>
+      <form onsubmit="register(event)">
+        <div class="area">
+          <div class="left">
+            <div class="field">
+              <label>First Name</label>
+              <input name="firstName" type="text" required />
+            </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input name="lastName" type="text" required />
+            </div>
+            <div class="field">
+              <label>Age</label>
+              <input name="age" type="number" required />
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input name="email" type="email" required />
+            </div>
+            <div class="field">
+              <label>Password</label>
+              <input name="password" type="password" required />
+            </div>
+          </div>
+          <div class="right">
+            <div class="field">
+              <label>Address</label>
+              <input name="address" type="text" />
+            </div>
+            <div class="field">
+              <label>Phone</label>
+              <input name="phone" type="text" />
+            </div>
+            <div class="field">
+              <label>Zipcode</label>
+              <input name="zipcode" type="text" />
+            </div>
+            <div class="field">
+              <label>Avatar</label>
+              <input name="avatar" type="text" />
+            </div>
+            <div class="field sqesi">
+              <div class="genderField">
+                <input type="radio" name="gender" value="MALE" />
+                <label>Male</label>
+              </div>
+              <div class="genderField">
+                <input type="radio" name="gender" value="FEMALE" />
+                <label>Female</label>
+              </div>
+              <div class="genderField">
+                <input type="radio" name="gender" value="OTHER" />
+                <label>Other</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit">REGISTER</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
