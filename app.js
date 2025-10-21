@@ -49,7 +49,7 @@ function addToCart(price, id) {
         body: JSON.stringify(info)
     })
     .then(res => res.text())
-    .then(() => alert("დაემატა"));
+    ;
 }
 
 
