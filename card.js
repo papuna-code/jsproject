@@ -8,9 +8,7 @@ function cartArea() {
       if (data.length > 0) {
         data.forEach(item => section.innerHTML += card(item));
       } else {
-        section.innerHTML = `
-          <img src="https://www.nicepng.com/png/detail/322-3224210_your-cart-is-currently-empty-empty-shopping-cart.png" alt="">
-        `;
+        section.innerHTML = "your cart is empty"
       }
     });
 }
@@ -64,7 +62,7 @@ function removeFromCart(id) {
 
 function increase(q, p, id) {
   q++;
-  let newPrice = (p / (q - 1)) * q; // ✅ ახალი ფასი რაოდენობის მიხედვით
+  let newPrice = (p / (q - 1)) * q; 
 
   let info = {
     quantity: q,

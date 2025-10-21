@@ -9,20 +9,46 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
   />
-
 </head>
 
 <body>
-  <nav>
-    <div class="bar">
-      <img src="image/step logog.png" alt="" />
-      <div class="meny">
-        <a href="index.html">Home</a>
-        <a href="card.html">Cart</a>
-        <a href="#" id="registerBtn">Register</a>
-      </div>
+<nav>
+  <div class="bar">
+    <img src="image/step logog.png" alt="" />
+    <div class="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
     </div>
-  </nav>
+    <div class="meny nav-links">
+      <a href="index.html">Home</a>
+      <a href="card.html">Cart</a>
+      <a href="#" id="registerBtn">Register</a>
+      <a href="#" id="loginBtn">Login</a>
+    </div>
+  </div>
+</nav>
+
+ 
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span style="width: 20px;
+      cursor: pointer;" class="login-clos">&times;</span>
+      <h2>Login</h2>
+      <form onsubmit="login(event)">
+        <div class="field">
+          <label>Email</label>
+          <input name="email" type="email"  />
+        </div>
+        <div class="field">
+          <label for="">Password</label>
+          <input name="password" type="password"  />
+        </div>
+        <button type="submit">LOGIN</button>
+      </form>
+     <button onclick="gotoProfile()">GO TO PROFILE PAGE</button>
+    </div>
+
+  </div>
 
   <div class="image">
     <h1>Fast and efficient, online ordering you must try.</h1>
@@ -62,9 +88,10 @@
     <section></section>
   </div>
 
+
   <div class="modal" id="registerModal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span  class="close">&times;</span>
       <h2>Register</h2>
       <form onsubmit="register(event)">
         <div class="area">
@@ -127,9 +154,7 @@
       </form>
     </div>
   </div>
-
-
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
   <script src="app.js"></script>
-
 </body>
 </html>

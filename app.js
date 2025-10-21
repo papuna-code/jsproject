@@ -154,15 +154,49 @@ function gotoProfile() {
 }
 
 let registerBtn = document.getElementById("registerBtn");
-    let modal = document.getElementById("registerModal");
-    let closeBtn = document.querySelector(".close");
+let registerModal = document.getElementById("registerModal");
+let registerClose = registerModal.querySelector(".close");
 
-    registerBtn.onclick = () => {
-      modal.style.display = "flex";
-    };
-    closeBtn.onclick = () => {
-      modal.style.display = "none";
-    };
-    window.onclick = (e) => {
-      if (e.target === modal) modal.style.display = "none";
-    };
+registerBtn.addEventListener("click", () => {
+  registerModal.style.display = "flex";
+});
+
+registerClose.addEventListener("click", () => {
+  registerModal.style.display = "none";
+});
+
+
+
+let loginBtn = document.getElementById("loginBtn");
+let loginModal = document.getElementById("loginModal");
+let loginClose = loginModal.querySelector(".login-clos");
+
+loginBtn.addEventListener("click", () => {
+  loginModal.style.display = "flex";
+});
+
+loginClose.addEventListener("click", () => {
+  loginModal.style.display = "none";
+});
+
+
+
+window.addEventListener("click", (e) => {
+  if (e.target === registerModal) {
+    registerModal.style.display = "none";
+  }
+  if (e.target === loginModal) {
+    loginModal.style.display = "none";
+  }
+});
+
+
+
+let menuToggle = document.querySelector(".menu-toggle");
+let  navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+
