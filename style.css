@@ -311,6 +311,25 @@ section {
     gap: 30px;
 }
 
+
+
+.modal-content  button {
+  width: 550px;
+  border: none;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: darkred;
+  color: white;
+  transition: 0.3;
+}
+
+.modal-content  button:hover{
+  background-color: rgb(186, 3, 3);
+}
+
+
+
 .card {
   position: relative;
   width: 250px;
